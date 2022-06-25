@@ -1,6 +1,8 @@
 pipeline {
     agent any
     
+    triggers { pollSCM('* * * * *') }
+
     environment {
         WORK_FOLDER = 'C:\\TEST_JENKINS\\'
     }
