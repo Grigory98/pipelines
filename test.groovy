@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Begin') {
             steps {
-                echo 'Begin job'
+                echo 'Begin job, test 2'
             }
         }
         stage('Ping') {
