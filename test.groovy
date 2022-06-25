@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Begin') {
             steps {
-                echo 'Begin job, test 2'
+                echo 'Begin job, test 3'
             }
         }
         stage('Clone project') {
