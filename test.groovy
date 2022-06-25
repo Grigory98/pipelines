@@ -15,7 +15,8 @@ pipeline {
         }
         stage('Clone project') {
             steps {
-                bat "git clone https://github.com/Grigory98/tests-course.git ${WORK_FOLDER}"
+                bat "ping yandex.ru"
+                //bat "git clone https://github.com/Grigory98/tests-course.git ${WORK_FOLDER}"
             }
         }
         stage('End')
