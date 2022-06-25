@@ -5,6 +5,7 @@ pipeline {
 
     environment {
         WORK_FOLDER = 'C:\\TEST_JENKINS\\'
+        GIT = 'C:\Program Files\Git\bin'
     }
     
     stages {
@@ -13,8 +14,9 @@ pipeline {
                 echo 'Begin job, test 2'
             }
         }
-        stage('Ping') {
+        stage('Clone project') {
             steps {
+                bat "cd ${GIT}"
                 bat "git clone https://github.com/Grigory98/tests-course.git ${WORK_FOLDER}"
             }
         }
