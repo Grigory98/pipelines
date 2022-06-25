@@ -5,7 +5,7 @@ pipeline {
 
     environment {
         WORK_FOLDER = 'C:\\TEST_JENKINS\\'
-        GIT = 'C:\Program Files\Git\bin'
+        GIT = 'C:\\Program Files\\Git\\bin'
     }
     
     stages {
