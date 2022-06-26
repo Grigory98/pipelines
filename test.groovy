@@ -16,7 +16,7 @@ pipeline {
             }
         }
         stage('Clone project') {
-            when { expression { MY_FILE == 'true' } }
+            when { expression { MY_FILE == 'false' } }
             steps {
                 echo "Clone git project into local directory: ${GIT_FOLDER}"
                 bat "cd ${GIT_FOLDER} && git clone https://github.com/Grigory98/tests-course.git ${WORK_FOLDER}"
