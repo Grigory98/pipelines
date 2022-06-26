@@ -15,7 +15,7 @@ pipeline {
             }
         }
         stage('Clone project') {
-            when { not { expression { return fileExists('README.md') } } }
+            when { expression { return !fileExists('README.md') } }
             steps {
                 echo "Clone git project into local directory: ${GIT_FOLDER}"
                 bat "cd ${GIT_FOLDER} && git clone https://github.com/Grigory98/tests-course.git ${WORK_FOLDER}"
