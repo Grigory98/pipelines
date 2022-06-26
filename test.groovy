@@ -11,19 +11,19 @@ pipeline {
     stages {
         stage('Begin') {
             steps {
-                echo 'Begin job, test 4'
+                echo 'Starting job...'
             }
         }
         stage('Clone project') {
             steps {
+                echo "Clone git project into local directory: ${GIT_FOLDER}"
                 bat "cd ${GIT_FOLDER} && git clone https://github.com/Grigory98/tests-course.git ${WORK_FOLDER}"
-                //bat "git clone https://github.com/Grigory98/tests-course.git ${WORK_FOLDER}"
             }
         }
         stage('End')
         {
             steps {
-                echo 'End job'
+                echo 'Job finished'
             }
         }
     }
