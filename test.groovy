@@ -15,6 +15,13 @@ pipeline {
                 echo 'Starting job...'
             }
         }
+        stage('Pull project') {
+            when { expression { MY_FILE == 'true'} }
+            steps {
+                echo "Pull git project into local directory: ${GIT_FOLDER}"
+                bat "cd ${GIT_FOLDER} && git pull"
+            }
+        }
         stage('Clone project') {
             when { expression { MY_FILE == 'false' } }
             steps {
