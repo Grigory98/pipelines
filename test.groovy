@@ -21,7 +21,7 @@ pipeline {
             when { expression { MY_FILE == 'true'} }
             steps {
                 echo "Pull git project into local directory: ${GIT_FOLDER}"
-                bat "cd ${WORK_FOLDER} && ${GIT_FOLDER}\\git.exe pull"
+                bat "cd ${GIT_FOLDER} && git -C ${WORK_FOLDER} pull"
             }
         }
         stage('Clone project') {
