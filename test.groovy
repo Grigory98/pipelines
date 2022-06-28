@@ -13,7 +13,7 @@ pipeline {
         stage('Begin') {
             steps {
                 echo 'Starting job...'
-                echo "${GIT_FOLDER}\\git.exe git --version"
+                bat "${GIT_FOLDER}\\git.exe git --version"
                 
             }
         }
