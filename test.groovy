@@ -7,14 +7,13 @@ pipeline {
         WORK_FOLDER = 'C:\\TEST_JENKINS\\'
         GIT_FOLDER  = 'C:\\Program Files\\Git\\bin'
         MY_FILE = fileExists 'C:\\TEST_JENKINS\\README.md'
-        DISABLE_AUTH = 'true'
-        ENABLE_AUTH = 'false'
     }
     
     stages {
         stage('Begin') {
             steps {
                 echo 'Starting job...'
+                echo "${GIT_FOLDER}\\git.exe git --version"
                 
             }
         }
